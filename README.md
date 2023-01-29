@@ -3,7 +3,7 @@ Exploring Authoring Techniques with CSS - Authoring 1
 </br>
 
 ### Assignment Description
-</br></br>
+</br>
 Use the in-class ToDo list as your starting point. Use generic selectors to add some style /
 visual updates to the page.
 </br></br>
