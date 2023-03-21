@@ -15,27 +15,24 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-h1,
-h2 {
+h1 h2 {
     font-family: 'Edu NSW ACT Foundation', cursive;
 }
 
-
-.header-box {
-
-    display: inline-block;
-}
 
 
 #headerstyle {
     background-color: #ffb3ba;
     padding-top: 5px;
     padding-bottom: 5px;
+    margin-bottom: 80px;
     top: 0;
 }
 
-
-
+#headerstyle h1 {
+    text-align: center;
+    margin: 30px;
+}
 
 main {
     text-align: center
@@ -79,12 +76,80 @@ article:first-of-type h2 {
     color: white;
 }
 
+
+.content-todo {
+    display: table;
+}
+
+.title-todo {
+    display: table-cell;
+    float: left;
+    margin-left: 20px;
+    margin-top: 30px;
+    
+}
+
+.picture-todo {
+    display: table-cell;
+    float: left;
+    margin-left: 130px;
+    
+}
+
 #todo {
-    border-color: #fff2a6;
+    border-color: #b2dafa;
 }
 
 #todo h2 {
-    background-color: #fff2a6;
+    color: rgb(0, 28, 167);
+}
+
+#todo ul li label{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+#todo ul li label input{
+    visibility: hidden;
+    appearance: none;
+}
+
+#todo ul li label p {
+    position: absolute;
+}
+
+#todo ul li label span {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.content-inprogress {
+    display: table;
+}
+
+.title-inprogress {
+    display: table-cell;
+    float: left;
+    margin-left: 20px;
+    margin-top: 30px;
+    
+}
+
+.picture-inprogress {
+    display: table-cell;
+    float: left;
+    margin-left: 80px;
+    
 }
 
 #inprogress ul li label {
@@ -95,15 +160,6 @@ article:first-of-type h2 {
     cursor: pointer;
 }
 
-#done ul li label {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-}
-
-
 #inprogress {
     border-color: #ff6961;
 }
@@ -112,30 +168,145 @@ article:first-of-type h2 {
     color: red;
 }
 
+#inprogress ul li label input {
+    visibility: hidden;
+    appearance: none;
+}
+
+#inprogress ul li label p {
+    position: absolute;
+}
+
+#inprogress ul li label span {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#inprogress ul li label span:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    width: 10px;
+    height: 5px;
+    border-left: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    transform: rotate(-40deg);
+}
+
+#inprogress ul li label input:checked~p {
+    text-decoration: line-through;
+    color: #ccc;
+   
+}
+
+#inprogress ul li label input:checked~span {
+    background-color: red;
+    border-color: 1px solid red;
+}
+
+#inprogress ul li label input:checked~span::before {
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+
+
+
+
+
+
+.content-done {
+    display: table;
+}
+
+.title-done {
+    display: table-cell;
+    float: left;
+    margin-left: 20px;
+    margin-top: 30px;
+    
+}
+
+.picture-done {
+    display: table-cell;
+    float: left;
+    margin-left: 130px;
+    
+}
+
+#done ul li label {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
 #done {
-    border-color: green;
+    border-color: #9bd0b7;
 }
 
 #done h2 {
     color: green;
 }
 
+#done ul li label input {
+    visibility: hidden;
+    appearance: none;
+}
+
+#done ul li label p {
+    position: absolute;
+}
+
+#done ul li label span {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#done ul li label span:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    width: 10px;
+    height: 5px;
+    border-left: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    transform: rotate(-40deg);
+}
+
+#done ul li label input:checked~p {
+    text-decoration: line-through;
+    color: #ccc;
+   
+}
+
+#done ul li label input:checked~span {
+    background-color: green;
+    border-color: 1px solid #03a9f4;
+}
+
+#done ul li label input:checked~span::before {
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
 ul li {
     padding: 6px 8px;
     color: black;
 
-}
-
-#todo li:nth-child(odd) {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-#inprogress li:nth-child(odd) {
-    background-color: rgba(255, 0, 0, 0.5);
-}
-
-#done li:nth-child(odd) {
-    background-color: rgba(0, 255, 0, 0.5);
 }
 
 /* RESPONSIVE CODE */
