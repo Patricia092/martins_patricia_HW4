@@ -14,7 +14,7 @@ Exploring Authoring Techniques with CSS - Authoring 1
 </br></br>
 
 <p align ="center">
-<img src = "./img/travel_checklist_print.png" width ="850px" height="350px">
+<img src = "./img/travel_checklist_print.png" width ="750px" height="500px">
 
 <p align="center">
 <br>
